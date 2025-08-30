@@ -1,0 +1,33 @@
+df_instacart = pd.read_csv('/datasets/instacart_orders.csv', sep=';')
+df_products = pd.read_csv('/datasets/products.csv', sep=';')
+df_aisles = pd.read_csv('/datasets/aisles.csv', sep=';')
+df_dpms = pd.read_csv('/datasets/departments.csv', sep=';')
+df_order = pd.read_csv('/datasets/order_products.csv', sep=';')
+
+instacart_orders.csv: cada fila corresponde a un pedido en la aplicación Instacart.
+'order_id': número de ID que identifica de manera única cada pedido.
+'user_id': número de ID que identifica de manera única la cuenta de cada cliente.
+'order_number': el número de veces que este cliente ha hecho un pedido.
+'order_dow': día de la semana en que se hizo el pedido (0 si es domingo).
+'order_hour_of_day': hora del día en que se hizo el pedido.
+'days_since_prior_order': número de días transcurridos desde que este cliente hizo su pedido anterior.
+
+products.csv: cada fila corresponde a un producto único que pueden comprar los clientes.
+'product_id': número ID que identifica de manera única cada producto.
+'product_name': nombre del producto.
+'aisle_id': número ID que identifica de manera única cada categoría de pasillo de víveres.
+'department_id': número ID que identifica de manera única cada departamento de víveres.
+
+departments.csv
+'department_id': número ID que identifica de manera única cada departamento de víveres.
+'department': nombre del departamento.
+
+aisles.csv
+'aisle_id': número ID que identifica de manera única cada categoría de pasillo de víveres.
+'aisle': nombre del pasillo.
+
+order_products.csv: cada fila corresponde a un artículo pedido en un pedido.
+'order_id': número de ID que identifica de manera única cada pedido.
+'product_id': número ID que identifica de manera única cada producto.
+'add_to_cart_order': el orden secuencial en el que se añadió cada artículo en el carrito.
+'reordered': 0 si el cliente nunca ha pedido este producto antes, 1 si lo ha pedido.
